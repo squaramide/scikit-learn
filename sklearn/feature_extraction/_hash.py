@@ -197,9 +197,6 @@ class FeatureHasher(TransformerMixin, BaseEstimator):
 
         return X
 
-    def _get_tags(self):
-        return {**super()._get_tags(), "requires_fit": False}
-
     def __sklearn_tags__(self):
         tags = super().__sklearn_tags__()
         tags.input_tags.two_d_array = False
